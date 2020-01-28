@@ -8,13 +8,13 @@
     <title>Code Quiz</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- <script>$(document).ready(function () { });</script> -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
     <div id="container">
-        <div id="highscores" onclick="accessHighscores()">View Highscores
+        <div class="text-left float-left p-3" id="highscores" onclick="accessHighscores()">View Highscores
             <div id="enterNewScore" style="display: none">Enter Your Initials</div>
             <form id="scoreForm">
                 <input type="text" id="initials" style="display: none";/>
@@ -22,11 +22,11 @@
             <div id="scoreList" style="display: none"></div>
 
         </div>
-        <div id="timer"></div>
-        <div id="start">Start Quiz!</div>
+        <div class="text-right float-right p-3" id="timer">Time:</div>
+        <div class="text-center p-6 " id="start">Start Quiz!</div>
         <div id="quiz" style="display: none">
-            <div id="question"></div>
-            <div id="choices">
+            <div class="text-center" id="question"></div>
+            <div class="text-center" id="choices">
                 <button type="button" class="btn btn-info choice" id="choiceA" onclick="check('choiceA')"></button>
                 <button type="button" class="btn btn-info choice" id="choiceB" onclick="check('choiceB')"></button>
                 <button type="button" class="btn btn-info choice" id="choiceC" onclick="check('choiceC')"></button>

@@ -74,11 +74,10 @@ function startQuiz() {
     quiz.style.display = "block";
     showQuestion();
     setTime();
-    console.log("hey");
 }
 function check(answer) {
     if (answer == questions[currentQuestion].correct) {
-        score += 10;
+        score += 25;
         console.log("correct " + score);
         currentQuestion++;
     } else {
@@ -88,7 +87,6 @@ function check(answer) {
 
     if (currentQuestion <= finalQuestion) {
         showQuestion();
-        console.log(currentQuestion);
     } else {
         secondsLeft = 0;
         gameOver();
