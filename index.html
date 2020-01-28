@@ -8,13 +8,18 @@
     <title>Code Quiz</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- <script>$(document).ready(function () { });</script> -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
     <div id="container">
-        <div id="highscores">View Highscores
-            <div id="newScore" style="display: none"></div>
+        <div id="highscores" onclick="accessHighscores()">View Highscores
+            <div id="enterNewScore" style="display: none">Enter Your Initials</div>
+            <form id="scoreForm">
+                <input type="text" id="initials" style="display: none";/>
+            </form>
+            <div id="scoreList" style="display: none"></div>
 
         </div>
         <div id="timer"></div>
