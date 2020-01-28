@@ -1,27 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Code Quiz</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- <script>$(document).ready(function () { });</script> -->
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body>
     <div id="container">
-        <div id="highscores">View Highscores</div>
+        <div id="highscores">View Highscores
+            <div id="newScore" style="display: none"></div>
+
+        </div>
         <div id="timer"></div>
         <div id="start">Start Quiz!</div>
-        <div id="quiz" style= "display: none">
+        <div id="quiz" style="display: none">
             <div id="question"></div>
             <div id="choices">
-                <div class="choice" id="choiceA"></div>
-                <div class="choice" id="choiceB"></div>
-                <div class="choice" id="choiceC"></div>
+                <div class="choice" id="choiceA" onclick="check('choiceA')"></div>
+                <div class="choice" id="choiceB" onclick="check('choiceB')"></div>
+                <div class="choice" id="choiceC" onclick="check('choiceC')"></div>
             </div>
         </div>
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>
