@@ -7,19 +7,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Code Quiz</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!-- <script>$(document).ready(function () { });</script> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
+    <script>$(document).ready(function () { });</script>
     <div id="container">
         <button type="button" class="btn btn-default btn-md m-3" data-toggle="modal" data-target="#highscoreModal"
             onclick="accessHighscores()">View Highscores</button>
+        <!-- modal for view highscores -->
         <div class="modal fade" id="highscoreModal" role="dialog">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -27,11 +27,7 @@
                         <h4 class="modal-title text-left">Highscores</h4>
                     </div>
                     <div class="modal-body">
-                        <div id="enterNewScore">Enter Your Initials</div>
-                        <form id="scoreForm">
-                            <input type="text" id="initials" />
-                        </form>
-                        <div id="scoreList" ></div>
+                        <div id="scoreList"></div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -40,13 +36,34 @@
 
             </div>
         </div>
-        <!-- <div class="text-left float-left p-3" id="highscores" onclick="accessHighscores()">View Highscores
-            <div id="enterNewScore" style="display: none">Enter Your Initials</div>
-            <form id="scoreForm">
-                <input type="text" id="initials" style="display: none";/>
-            </form>
-            <div id="scoreList" style="display: none"></div>
-        </div> -->
+
+        <!-- modal fr entering new score -->
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="btn btn-default btn-md" data-toggle="modal" data-target="#scoreModal">Log your score!</button>
+
+        <!-- Modal -->
+        <div id="scoreModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Enter Your Initials</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form id="scoreForm">
+                            <input type="text" id="initials" />
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
         <div class="text-right float-right p-3" id="timer">Time:</div>
         <div class="text-center p-6 " id="start">Start Quiz!</div>
         <div id="quiz" style="display: none">
@@ -64,6 +81,7 @@
             </div>
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 

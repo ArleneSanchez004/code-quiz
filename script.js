@@ -1,5 +1,5 @@
 var highscores = document.getElementById("highscores");
-var enterNewScore = document.getElementById("newScore");
+var enterNewScore = document.getElementById("EnterNewScore");
 var initials = document.getElementById("initials");
 var scoreList = document.getElementById("scoreList");
 var scoreForm = document.getElementById("scoreForm");
@@ -99,21 +99,18 @@ function check(answer) {
 }
 
 function gameOver(){
-    enterNewScore.style.display = "block";
-    scoreList.style.display = "block";
-    initials.style.display = "block";
+    $('#enterNewScore').modal('show');
+    //enterNewScore.style.display = "inline";
+    //scoreList.style.display = "block";
+    //initials.style.display = "block";
 }
 
 //start button
 start.addEventListener("click", startQuiz);
 
 //highscore handling
-function accessHighscores(){
-
-    
-    // scoreList.style.display = "block";
-    // initials.style.display = "block";
-};
+//function accessHighscores(){
+//};
 
 var scores = [];
 
