@@ -80,9 +80,13 @@ function check(answer) {
         score += 25;
         console.log("correct " + score);
         currentQuestion++;
+        $("#correctAnswer").fadeToggle();
+        $("#correctAnswer").fadeToggle();
     } else {
-        secondsLeft -= 10;
+        secondsLeft -= 15;
         currentQuestion++;
+        $("#wrongAnswer").fadeToggle();
+        $("#wrongAnswer").fadeToggle();
     }
 
     if (currentQuestion <= finalQuestion) {
@@ -105,8 +109,10 @@ start.addEventListener("click", startQuiz);
 
 //highscore handling
 function accessHighscores(){
-    scoreList.style.display = "block";
-    initials.style.display = "block";
+
+    
+    // scoreList.style.display = "block";
+    // initials.style.display = "block";
 };
 
 var scores = [];
@@ -118,9 +124,9 @@ function renderScores(){
 
     for (i = 0; i < scores.length; i++){
         var sco = scores[i];
-        var li = document.createElement("li");
-        li.textContent = sco;
-        scoreList.appendChild(li);
+        var newP = document.createElement("p");
+        newP.textContent = sco;
+        scoreList.appendChild(newP);
         scoreList.append(score);
     }
 }
